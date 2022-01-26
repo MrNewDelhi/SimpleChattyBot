@@ -1,5 +1,7 @@
 package IntegerTypesAndOperations;
 
+// TODO : h-b-1 / a-b + 1
+
 import java.util.Scanner;
 
 public class Snail {
@@ -9,7 +11,11 @@ public class Snail {
         int up = sc.nextInt();
         int down = sc.nextInt();
 
-        int steps = 1 + ((height - up) / (up-down)) + ((height - up) % (up - down));
-        System.out.println(steps);
+        int steps = 1 + ((height - up) / (up-down));
+        if(((height - up) % (up - down)) > 0) {
+            System.out.println(steps + 1);
+        }else {
+            System.out.println(steps);
+        }
     }
 }
